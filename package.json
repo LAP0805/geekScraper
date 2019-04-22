@@ -1,0 +1,26 @@
+{
+  "name": "geekscraper",
+  "version": "1.0.0",
+  "description": "A web app that scrapes news articles from Geek.com and allows users to comment on those articles",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LesleyPond/geekScraper.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LesleyPond/geekScraper/issues"
+  },
+  "homepage": "https://github.com/LesleyPond/geekScraper#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "cheerio": "^1.0.0-rc.3",
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.2",
+    "mongoose": "^5.5.2"
+  }
+}

@@ -1,0 +1,111 @@
+<div class="text-center"><img src="../images/geeksocial.jpg" id="mainImage"></div>
+
+<h3 id="geek2">Your source for geeky articles!</h3>
+<h1><button class="btn btn-primary" id="scrape">Check for new articles</button></h1>
+
+
+<div class="container">
+
+
+  {{#results}}
+  <div class="article">
+    <div class="row titleDiv">
+      <a href={{this.link}} target="_blank">
+        <h5>{{this.title}}</h5>
+      </a>
+    </div>
+    <div class="row text-center">
+      <img src={{this.image}} class="populatedImages mx-auto d-block">
+    </div>
+
+    <div class="row">
+      <div class="col text-center">
+        <br>
+        <button type="button" class="btn btn-info openNotes" data-toggle="modal" data-target="#{{this._id}}1">
+          View Comments
+        </button>
+        <button type="button" class="btn btn-info openNotes" data-toggle="modal" data-target="#{{this._id}}">
+          Add a Comment
+        </button>
+      </div>
+
+
+    </div>
+
+
+    <div class="modal fade" id={{this._id}} tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Comment on article {{this._id}}</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" class="form-control inputClass" id="formName{{this._id}}" placeholder="Your Name">
+            </div>
+            <form class="noteForm" id="form{{this._id}}">
+              <div class="form-group">
+                <label for="note">Comment</label>
+                <textarea class="form-control inputClass" id="formNote{{this._id}}" placeholder="Type note here"
+                  rows="3"></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary submitForm" id={{this._id}}>Submit</button>
+            </form>
+            <div class="noteError">
+              <p>Please fill out all fields!</p>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" tabindex="-1" role="dialog" id="{{this._id}}1">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Comments</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="comments">
+              {{#this.notes}}
+              <div id={{_id}}>
+                <br>
+                <strong>{{name}}</strong>
+                <br>
+                {{note}}
+                <button type="button" class="btn btn-danger deleteNoteButton" data-id={{_id}}>x</button>
+              </div>
+              {{/this.notes}}
+            </div>
+
+          </div>
+          <div class="modal-footer">
+
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+  </div>
+
+  {{/results}}
+
+</div>
+</div>

@@ -57,7 +57,7 @@ app.get("/scrape", (req, res) => {
 
       db.Article.create(result).then(function (newArticle) {
         console.log(newArticle)
-getAllTheThings();
+         getAllTheThings();
       })
     });
 

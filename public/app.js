@@ -15,7 +15,9 @@ $('.openNotes').on('click', function () {
     $(id).modal('show');
 
 });
-
+function doit(){
+    window.location.reload(true);
+    };
 
 //get new articles//
 $('#scrape').on('click', () => {
@@ -23,9 +25,9 @@ $('#scrape').on('click', () => {
         method: 'GET',
         url: '/scrape/'
     }).then(function (data) {
-
+       
     });
-
+    setTimeout(doit, 3000);
 });
 
 //note submit//
@@ -50,6 +52,7 @@ $('.submitForm').on('click', function (event) {
         console.log(data)
         $('.modal').modal('hide')
         $('.noteForm').empty();
+        setTimeout(doit, 1000);
     });
 
 

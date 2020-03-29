@@ -1,65 +1,80 @@
-body{
+body {
     background-color: #D6D6D6;
     font-family: calibri;
 }
-h1{
+
+h1 {
     text-align: center;
-    
+
 }
-h2, h3{
-    text-align:center;
-    margin:10px;
+
+h2,
+h3 {
+    text-align: center;
+    margin: 10px;
 }
-h4,h5{
-    margin:10px;
-    text-align:center;
+
+h4,
+h5 {
+    margin: 10px;
+    text-align: center;
 }
-h5{
-    color:black;
+
+h5 {
+    color: black;
 }
-.populatedImages{
-    
+
+.populatedImages {
+
     max-width: 300px;
-    max-height:200px;
+    max-height: 200px;
 }
-.article{
+
+.article {
     background-color: #f5ecec;
-    margin:5px;
-    border-radius:5px;
-    float:left;
+    margin: 5px;
+    border-radius: 5px;
+    float: left;
     width: 350px;
-    height:350px;
-}
-a{
-    margin:10px;
-}
-#firstImage{
-    max-height:350px;
-}
-.inputClass{
-    width:90%!important;
-}
-.noteError{
-    color:red;
-    display:none;
+    height: 350px;
 }
 
-.titleDiv{
-    height:75px;
-    
+a {
+    margin: 10px;
+}
+
+#firstImage {
+    max-height: 350px;
+}
+
+.inputClass {
+    width: 90% !important;
+}
+
+.noteError {
+    color: red;
+    display: none;
+}
+
+.titleDiv {
+    height: 75px;
+
 
 }
-.btn{
-    margin:5px;
+
+.btn {
+    margin: 5px;
 }
-.navbar-brand{
-    color:white;
+
+.navbar-brand {
+    color: white;
 }
-#geek{
+
+#geek {
     font-family: 'VT323', monospace;
     font-size: 40px;
 }
-#mainImage{
-    max-height:300px;
-}
 
+#mainImage {
+    max-height: 300px;
+}
